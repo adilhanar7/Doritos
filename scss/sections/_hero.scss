@@ -1,0 +1,214 @@
+.hero{
+    padding-top: vw(150);
+    z-index: 3;
+    overflow: hidden;
+    // height: vw(1000);
+    &__row{
+        .hero__content{
+            width: 50%;
+            &:first-child{
+                overflow: hidden;
+                height: vw(500);
+                margin-bottom: vw(10);
+                position: relative;
+                bottom: vw(50);
+                left: vw(-30);
+                .hero__title{
+                    animation: animation-loader-hero__contentfirst 0.9s ease-in-out forwards;
+                    animation-delay: 4.8s;
+                    margin-left: -200%;
+                    width: vw(450);
+                    span{
+                        @include fontLodrinaSolidCursive(vw(45),900,vw(45));
+                        color: $text-orange107;
+                        letter-spacing: vw(7);
+                        text-shadow: vw(4) vw(3) 0 $text-border-black;
+                    }
+                }
+                .hero__subtitle{
+                    animation: animation-loader-hero__contentfirst 0.9s ease-in-out forwards;
+                    animation-delay: 5.2s;
+                    margin-left: -200%;
+                    span{
+                        @include fontLodrinaSolidCursive(vw(45),900,vw(45));
+                        color: $text-white;
+                        letter-spacing: vw(7);
+                        text-shadow: vw(5) vw(0) 0 $text-border-black;
+                    }
+                }
+                .hero__description{
+                    span{
+                        @include fontBarlowCondensedSansSerif(vw(14),400,vw(16));
+                        color: $text-white;
+                        width: vw(500);
+                        animation: animation-loader-hero__contentfirst 0.9s ease-in-out forwards;
+                        animation-delay: 5.4s;
+                        margin-left: -500%;
+                    }
+                    strong{
+                        @include fontBarlowCondensedSansSerif(vw(19),700,vw(22));
+                        color: $text-white;
+                        animation: animation-loader-hero__contentfirst 0.9s ease-in-out forwards;
+                        animation-delay: 5.5s;
+                        margin-left: -200%;
+                    }
+                }
+                .hero__price{
+                    animation: animation-loader-hero__contentfirst 0.9s ease-in-out forwards;
+                    animation-delay: 5.8s;
+                    margin-left: -200%;
+                    span{
+                        @include fontLodrinaSolidCursive(vw(42),900,vw(18));
+                        text-shadow: vw(5) vw(0) 0 $text-border-black;
+                        color: $text-white;
+                    }
+                }
+                .hero__btn{
+                    animation: animation-loader-hero__contentfirstbtn 0.9s ease-in-out forwards;
+                    animation-delay: 6s;
+                    position: relative;
+                    bottom: -50%;
+                    background: $bg-orange107;
+                    padding: vw(18)vw(40);
+                    transition: 0.6s;
+                    border-radius: vw(10);
+                    &:hover{
+                        background: $bg-black;
+                        span{
+                        color: $text-orange107;
+                        }
+                    }
+                    span{
+                        @include fontLodrinaSolidCursive(vw(18),500,vw(18));
+                        color: $text-black;
+                        transition: 0.6s;
+                    }
+                }
+                @keyframes animation-loader-hero__contentfirstbtn {
+                    0%{
+                    bottom: -50%;
+                    }
+                    100%{
+                    bottom: vw(0);
+                    }
+                }
+                @keyframes animation-loader-hero__contentfirst {
+                    0%{
+                        margin-left: -30%;
+                    }
+                    100%{
+                        margin-left: 0;
+                    }
+                }
+            }
+            &:last-child{
+                padding-top:vw(7);
+                position: relative; 
+                .hero__backdrop{
+                    width: vw(550);
+                    height: vw(530);
+                    background-color: $bg-orange107;
+                    border-radius: 10%;
+                    transform: skew(-15deg);
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -150%;
+                    right: vw(-50);
+                    animation: animation-loader-hero__contentlastbackdrop 0.9s ease-in-out forwards;
+                    animation-delay: 4.8s;
+                }
+                .hero__doritos-chipse{
+                    position: absolute;
+                    height: vw(600);
+                    z-index: 2; 
+                    width: vw(620);
+                    bottom: 150%;
+                    animation: animation-loader-hero__contentlastdoritos-chipse 0.9s  ease-in-out forwards;
+                    animation-delay: 5s;
+                    }
+                    .hero__doritos-chipse.active{
+                        animation: animation-infinite-hero__contentdroitos-chipse 2s ease-in-out infinite alternate;
+                    }
+                .chipse__details{
+                .hero__chipse{
+                    position: absolute;
+                    right: -150%;   
+                    top: vw(-170);
+                    height: vw(300);
+                    width: vw(300);
+                    z-index: 3;
+                    animation: animation-loader-hero__contentlastchipse 0.9s ease-in-out forwards;
+                    animation-delay: 5s;
+                }
+                .hero__sauce{
+                    position: absolute;
+                    height: vw(120);
+                    width: vw(120);
+                    left: vw(50);
+                    bottom: -100%;
+                    animation: animation-loader-hero__contentlast 0.9s ease-in-out forwards;
+                    animation-delay: 5.4s;
+                }
+                .hero__spice{
+                    position: absolute;
+                    height: vw(220);
+                    width: vw(220);
+                    z-index: 1;
+                    right: vw(-100);
+                    bottom: -100%;
+                    animation: animation-loader-hero__contentlast 0.9s ease-in-out forwards;
+                    animation-delay: 5.4s;
+                 }
+                }
+                @keyframes animation-loader-hero__contentlastbackdrop {
+                    0%{
+                    bottom: -150%;
+                    }
+                    100%{
+                    bottom: 2%;
+                    }
+                }
+                @keyframes animation-loader-hero__contentlastdoritos-chipse_infinite {
+                    0%{
+                    bottom: vw(-50);
+                    }
+                    100%{
+                    bottom: vw(10);
+                    }
+                }
+                @keyframes animation-loader-hero__contentlastdoritos-chipse {
+                    0%{
+                    bottom: 150%;
+                    }
+                    100%{
+                    bottom: vw(-50);
+                    }
+                }
+                @keyframes animation-loader-hero__contentlastdoritos-chipse {
+                    0%{
+                    bottom: 150%;
+                    }
+                    100%{
+                    bottom: vw(-50);
+                    }
+                }
+                @keyframes animation-loader-hero__contentlastchipse {
+                    0%{
+                    right: -150%;
+                    }
+                    100%{
+                    right: -37%;
+                    }
+                }
+                @keyframes animation-loader-hero__contentlast {
+                    0%{
+                    bottom: -100%;
+                    }
+                    100%{
+                    bottom: vw(10);
+                    }
+                }
+            }
+        }
+    }
+}

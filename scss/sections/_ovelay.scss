@@ -1,0 +1,49 @@
+.ovelay{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    .overlay__first{
+        position: absolute;
+        width: 33.33%;
+        background: $bg-yellow;
+        top: 0;
+        height: 100%;
+        left: 0;
+        animation: animation-loader-overlay 1s ease-in-out forwards;
+        animation-delay: 0.5s;
+        z-index: 4;
+    }
+    .overlay__second{
+        position: absolute;
+        width: 33.33%;
+        background: $bg-yellow;
+        top: 0;
+        height: 100%;
+        left: 33.33%;
+        animation: animation-loader-overlay 1s ease-in-out forwards;
+        animation-delay: 0.7s;
+        z-index: 4;
+    }
+   .overlay__third{
+        position: absolute;
+        width: 33.33%;
+        background: $bg-yellow;
+        top: 0;
+        height: 100%;
+        left: 66.66%;
+        animation: animation-loader-overlay 1s ease-in-out forwards;
+        animation-delay: 1.1s;
+        z-index: 4;
+    }
+    @keyframes animation-loader-overlay {
+        0%{
+            top: 0;
+        }
+        100%{
+            top: -100%;
+        }
+    }
+}
+    

@@ -1,0 +1,14 @@
+@mixin fontLodrinaSolidCursive($font-size,$font-weight,$ln-height) {
+    font-family: 'Londrina Solid' , cursive;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $ln-height;
+    font-style: normal;
+}
+@mixin fontBarlowCondensedSansSerif($font-size,$font-weight,$ln-height) {
+    font-family: 'Barlow Condensed',sans-serif;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $ln-height;
+    font-style: normal;
+}

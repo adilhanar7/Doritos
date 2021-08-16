@@ -1,0 +1,24 @@
+@import './helpers/functions';
+@import './helpers/mixin';
+@import './helpers/variables';
+
+@import '../node_modules/macro-css/src/clear.scss';
+@import '../node_modules/macro-css/src/display.scss';
+@import '../node_modules/macro-css/src/spacing.scss';
+
+@import './components/header';
+
+@import './sections/hero';
+@import './sections/ovelay';
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: $bg-reddark;
+}
+.container{
+    margin: vw(0) auto;
+    max-width: vw(1110);
+}
+

@@ -1,0 +1,141 @@
+.header{
+    margin-top: vw(30);
+    &__row{
+        .logo{
+            position: absolute;
+            left: vw(200);
+            margin-top: -30%;
+            opacity: 0;
+            animation: animation-loader-header 0.4s ease-in-out forwards;
+            animation-delay: 2s;
+            img{
+                height: vw(100);
+                width: vw(150);
+            }
+        }
+        .header__nav{
+            margin-left: vw(300);
+            .header__list{
+                &-item{
+                    margin-left: vw(22);
+                    z-index: 3;
+                    opacity: 0;
+                    margin-top: -30%;
+                    .header__list-link{
+                        @include fontLodrinaSolidCursive(vw(14),400,vw(30));
+                        color: $text-white;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            bottom: vw(-10);
+                            left: 0;
+                            background: $bg-orange;
+                            width: 0;
+                            height: vw(3);
+                            transition: 0.2s;
+                        }
+                    }
+                    &:hover{
+                        .header__list-link::before{
+                            width: 90%;
+                        }
+                    }
+                    &:first-child{
+                    animation: animation-loader-header 0.4s ease-in-out forwards;
+                    animation-delay: 2.6s;
+                    }
+                    &:nth-child(2){
+                    animation: animation-loader-header 0.4s ease-in-out forwards;
+                    animation-delay: 3.2s;
+                    }
+                    &:nth-child(3){
+                    animation: animation-loader-header 0.4s ease-in-out forwards;
+                    animation-delay: 3.6s;
+                    }
+                    &:nth-child(4){
+                    animation: animation-loader-header 0.4s ease-in-out forwards;
+                    animation-delay: 4.2s;
+                    }
+                    &:last-child{
+                    animation: animation-loader-header 0.4s ease-in-out forwards;
+                    animation-delay: 4.5s;
+                    }
+                }
+            }
+        }
+        .cart{
+            opacity: 0;
+            z-index: 3;
+            margin-top: vw(10);
+            margin-left: -100%;
+            position: relative;
+            border: none;
+            background: transparent;
+            animation: animation-loader-cart 0.4s ease-in-out forwards;
+            animation-delay: 4.5s;
+            img{
+                box-sizing: border-box;
+                height: vw(70);
+                width: vw(70);
+                background: $bg-white;
+                padding: vw(20);
+                border-radius: vw(25);
+                transition: 0.5s;
+                &:hover{
+                    background: $bg-orange;
+                }
+            }
+            &:hover .cartNumer{
+                    background: $bg-white;
+                    &::before{
+                        color: $text-black;
+                    }
+            }
+            .cartNumer{
+                transition: 0.6s;
+                z-index: 2;
+                bottom: vw(50);
+                margin-left:  vw(60);
+                position: absolute;
+                background: $bg-black;
+                width: vw(30);
+                height: vw(30);
+                border-radius: vw(25);
+                padding: vw(10);
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: vw(-5)vw(5)vw(10) darken($bg-black,10%);
+                &::before{
+                  content: '2';
+                  transition: 0.4s;
+                  position: absolute;
+                  color: $text-white;
+                  @include fontLodrinaSolidCursive(vw(13),900,vw(30));
+                }
+            }
+        }
+    }
+    @keyframes animation-loader-header {
+        0%{
+            margin-top: -30%;
+            opacity: 0; 
+        }
+        100%{
+            margin-top: 0;
+            opacity: 1; 
+        }
+    }
+    @keyframes animation-loader-cart {
+        0%{
+            margin-left: 20%;
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            margin-left: vw(150);
+        }
+    }
+}
